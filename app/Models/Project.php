@@ -13,7 +13,8 @@ class Project extends Model
         'author',
         'date',
         'status',
-        'description'
+        'type_id',
+        'description',
     ];
 
     public function type(){
