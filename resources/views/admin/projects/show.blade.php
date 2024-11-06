@@ -13,10 +13,13 @@
                             <span class="fw-bold text-black">Author: </span> {{ $project->author }}
                         </p>
                         <p class="card-text">
-                            <span class="fw-bold text-black">Author: </span> {{ $project->date }}
+                            <span class="fw-bold text-black">Date: </span> {{ $project->date }}
                         </p>
                         <p class="card-text">
-                            <span class="fw-bold text-black">Author: </span> {{ $project->status }}
+                            <span class="fw-bold text-black">Type: </span> {{ $project->type->name }}
+                        </p>
+                        <p class="card-text">
+                            <span class="fw-bold text-black">Status: </span> {{ $project->status }}
                         </p>
                         <p class="card-text">
                             <span class="fw-bold text-black">Description: </span> {{ $project->description }}
