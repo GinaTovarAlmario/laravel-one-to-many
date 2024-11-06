@@ -32,8 +32,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="author" class="form-label">Author</label>
-                    <input type="text" class="form-control" id="author" name="author"
-                        value="{{ old('author') }}">
+                    <input type="text" class="form-control" id="author" name="author" value="{{ old('author') }}">
                     @error('author')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -42,8 +41,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="date" class="form-label">Date</label>
-                    <input type="text" class="form-control" id="date" name="date"
-                        value="{{ old('date') }}">
+                    <input type="text" class="form-control" id="date" name="date" value="{{ old('date') }}">
                     @error('date')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -52,8 +50,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="status" class="form-label">Status</label>
-                    <input type="text" class="form-control" id="status" name="status"
-                        value="{{ old('status') }}">
+                    <input type="text" class="form-control" id="status" name="status" value="{{ old('status') }}">
                     @error('author')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -61,10 +58,16 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="type" class="form-label">Type</label>
-                    <input type="text" class="form-control" id="type" name="type"
-                        value="{{ old('type') }}">
-                    @error('type')
+                    <label for="type_id" class="form-label">Type</label>
+                    <select name="type_id" id="type_id">
+                        <option value="">Select a Type</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}">
+                                {{ $type->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                    @error('type_id')
                         <div class="alert alert-danger">
                             {{ $message }}
                         </div>

@@ -62,6 +62,16 @@
                     @enderror
                 </div>
                 <div class="mb-3">
+                    <label for="type" class="form-label">Status</label>
+                    <input type="text" class="form-control" id="type" name="type"
+                        value="{{ old('type',$project->type->name)}}">
+                    @error('type')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" id="description" rows="6" name="description">
                         {{ old('description',$project->description) }}
