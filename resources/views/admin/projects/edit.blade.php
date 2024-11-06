@@ -62,10 +62,15 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="type" class="form-label">Status</label>
-                    <input type="text" class="form-control" id="type" name="type"
-                        value="{{ old('type',$project->type->name)}}">
-                    @error('type')
+                    <label for="type_id" class="form-label">Select a Type</label>
+                    <select name="type_id" id="type_id" class="form-control">
+                        @foreach ($types as $type)
+                            <option value="{{old( 'type_id',$type->id)}}">
+                                {{ $type->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                    @error('type_id')
                         <div class="alert alert-danger">
                             {{ $message }}
                         </div>
