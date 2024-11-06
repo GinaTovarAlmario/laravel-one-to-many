@@ -37,7 +37,7 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $project = Project::create($data);
-        return redirect()->route('admin.projects.show',['id' => $project->id]);
+        return redirect()->route('admin.projects.index');
     }
 
     /**
