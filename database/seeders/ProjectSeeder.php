@@ -24,6 +24,7 @@ class ProjectSeeder extends Seeder
             if($indice ==! 0){
                 $newProject = new Project();
                 $newProject->title = $riga[0];
+                $newProject->type_id = $faker->randomElement($typeIds);
                 $newProject->author = $riga[1];
                 $newProject->description = $faker->text();
                 $newProject->date = $riga[3];
