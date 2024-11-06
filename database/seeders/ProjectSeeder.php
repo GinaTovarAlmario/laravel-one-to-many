@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Functions\Helpers;
 use App\Models\Project;
+use App\Models\Type;
 
 class ProjectSeeder extends Seeder
 {
@@ -16,6 +17,8 @@ class ProjectSeeder extends Seeder
     public function run(Faker $faker): void
     {
         $arrayData = Helpers::getCsv( __DIR__ . "/list-projects.csv");
+        // vado a prendere i diversi type che ho a disposizione
+        $typeIds = Type::all()->pluck('id');
 
         foreach($arrayData as $indice => $riga){
             if($indice ==! 0){
