@@ -8,7 +8,7 @@
                     Editing {{ $project->title}}
                 </h1>
             </div>
-            {{-- @if ($errors->any())
+            @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
@@ -18,7 +18,7 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif --}}
+            @endif
             <form class="col-8 card bg-dark-subtle m-3" method="POST" action="{{ route('admin.projects.update', $project) }}">
                 @method('PUT')
                 @csrf

@@ -29,9 +29,9 @@ class StoreProjectRequest extends FormRequest
             'title'=>['required','string','min:2','max:80'],
             'author'=>['required','string','min:2','max:50'],
             'date'=>['required','date'],
-            'status'=>['required','string',],
+            'status'=>['required','string','min:3'],
             'type_id'=>['required','numeric','integer','exists:types,id'],
-            'description'=>['required','string','min:80'],
+            'description'=>['required','string','min:40'],
 
         ];
     }
