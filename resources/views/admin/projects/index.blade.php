@@ -18,6 +18,7 @@
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author</th>
+                            <th scope="col">Type</th>
                             <th scope="col">Date</th>
                             <th scope="col">Status</th>
                             <th>Actions</th>
@@ -28,6 +29,7 @@
                             <tr>
                                 <th scope="row">{{ $project->title }}</th>
                                 <td>{{ $project->author }}</td>
+                                <td>{{ $project->type->name }}</td>
                                 <td>{{ $project->date }}</td>
                                 <td>{{ $project->status }}</td>
                                 <td>
